@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		HTML5学习笔记+练习
+	</title>
+</head>
+<body>
+<h1 id="header1">这是一个标题，一级的</h1>
+<p>标题h、段落p、div一段无意义内容span一小段无意义内容。换行br,空格&nbsp,&gt &lt.有意义的标签,em变斜，语气中的强调,i变斜，把生僻的词变成专业词汇,b加粗，表示关键字，strong加粗，表示重点内容</p>
+<br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<p>
+		<h5 id="header02">html块</h5><br />
+
+1、div标签 块元素，表示一块内容，没有具体的语义。<br />
+2、span标签 行内元素，表示一行中的一小段内容，没有具体的语义。<br />
+
+含样式和语义的标签<br />
+
+1、em标签 行内元素，表示语气中的强调词<br />
+2、i标签 行内元素，原本没有语义，w3c强加了语义，表示专业词汇<br />
+3、b标签 行内元素，原本没有语义，w3c强加了语义，表示文档中的关键字或者产品名<br />
+4、strong标签 行内元素，表示非常重要的内容<br />
+
+语义化的标签<br />
+
+语义化的标签，就是在布局的时候多使用语义化的标签，搜索引擎在爬网的时候能认识这些标签，理解文档的结构，方便网站的收录。比如：h1标签是表示标题，p标签是表示段落，<br />
+ul、li标签是表示列表，a标签表示链接，dl、dt、dd表示定义列表等，语义化的标签不多。<br />
+</p>
+<p>
+		<b>含义标签</b>主要是对搜索引擎有用<br />
+		
+		<strong>div,span等无意义标签主要配合样式标签用</strong> <br />
+		<i>这是一个专业词汇</i> <br />
+		我今天<em>不吃饭</em> <br />
+		<img src="images/002-01.jpg" alt="水果"><br />
+	<!-->链接练习</!-->
+		<a href="http://news.sina.com.cn"> 新浪新闻 </a><br />
+		<a href="http://iambirdpeng.github.io" title="我的个人github主页">github个人主页</a><br />
+		<a href="http://iambirdpeng.github.io" title="我的github主页">
+			<img src="images/pic2x.jpg" alt="帅哥正在努力学习">
+		</a><br />
+
+		<a href="#header02">页内链接</a><br />
+		<a href="#">回到顶部的链接</a><br />
+		<a href="javascript:;">没有动作的链接</a><br />
+
+		<!-->在新窗口打开设置target属性为_blank</!-->
+		<a href="http://www.baidu.com" title="链接到百度" target="_blank"><div>4&gt;3 &nbsp; &nbsp; 3&lt;5</div></a>
+	<!-->列表练习  三种列小 ol>li 有序  ul>li无序  dl>(dt+dd) 定义列表 </!-->
+		<!-->有序列表</!-->
+		<div>ol>li*3   ----->快捷键生成3行有序列表生成如下：</div>
+		<ol>
+			<li>第一</li>
+			<li>第二</li>
+			<li>第三</li>
+		</ol>
+		<!-->无序列表</!-->
+		<div>ul>li*5 -------》快捷键，生成如下</div>
+		<ul>
+				<li>先问标题</li>
+				<li>先问标题</li>
+				<li>先问标题</li>
+				<li>先问标题</li>
+				<li>先问标题</li>
+			</ul>	
+
+		<!-->     ul>(li>a)*5————》一级级大于号验身，把要重复的小括号括起来再乘    按住CRT点选后 可以同时编辑多行 </!-->
+			<ul>
+				<li><a href="">新闻标题</a></li>
+				<li><a href="">新闻标题</a></li>
+				<li><a href="">新闻标题</a></li>
+				<li><a href="">新闻标题</a></li>
+				<li><a href="">新闻标题</a></li>
+			</ul>
+		<!-->宽度可以用百分比，colspan rowspan align》》》》》水平位置设置 valign </!-->
+			<table border="100" width="800" height="400">
+				<tr>
+							<th colspan="5">基本情况</th>
+							</tr>
+							<tr>
+								<td width="20%" align="middle">姓名</td>
+								<td width="20%" align="middle">吕鹏</td>
+								<td width="20%" align="middle">性别</td>
+								<td width="20%" align="middle">男</td>
+								<td rowspan="5" width="20%"><img src="images/person.png" alt="认真学习" /></td>
+							</tr>
+							<tr>
+								<td align="middle">民族</td>
+								<td align="middle"></td>
+								<td align="middle">出生日期</td>
+								<td align="middle"></td>
+								
+							</tr>
+							<tr>
+								<td align="middle">政治面貌</td>
+								<td align="middle"></td>
+								<td align="middle">健康情况</td>
+								<td align="middle"></td>
+								
+							</tr>
+							<tr>
+								<td align="middle">籍贯</td>
+								<td align="middle"></td>
+								<td align="middle">学历</td>
+								<td align="middle"></td>
+								
+							</tr>
+							<tr>
+								<td align="middle">电子邮箱</td>
+								<td align="middle"></td>
+								<td align="middle">联系电话</td>
+								<td align="middle"></td>
+								
+							</tr>			
+	
+
+
+
+
+			</table>
+
+
+
+
+</p>
+</body>
+</html>
