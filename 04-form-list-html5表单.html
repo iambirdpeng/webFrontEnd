@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册表单-练习表单的各种样式</title>
+</head>
+<body>
+<h3>用户注册</h3>
+	<form action="https://iambirdpeng.githu.io" method="get">
+		<div>
+			<label for="user"><b>账号：</b></label>
+			<input type="text" name="username" id="user">
+		</div>
+
+		<br><br>
+		<label for="pwd"><b>密码：</b></label>
+		<input type="password" name="userpwd" id="pwd">
+		<br><br>
+		<label for="gender">性别：</label>
+		<input type="radio" name="usergender" id="gender" value="1"> <span>男</span>
+		<input type="radio" name="usergender" id="gender" value="0"> <span>女</span>
+		<br><br>
+		<label>爱好:</label>
+		<input type="checkbox" name="favor" value="0"> <span>游戏</span>
+		<input type="checkbox" name="favor" value="1"> <span>逛街</span>
+		<input type="checkbox" name="favor" value="2"> <span>睡觉</span>
+		<br><br>
+		<div>
+			<label for="">籍贯：</label>
+			<select name="addr">
+				<option value="0">北 &nbsp;&nbsp;&nbsp;&nbsp;京</option>
+				<option value="1">上 &nbsp;&nbsp;&nbsp;&nbsp;海</option>
+				<option value="2">广 &nbsp;&nbsp;&nbsp;&nbsp;州</option>
+				<option value="3">深 &nbsp;&nbsp;&nbsp;&nbsp;圳</option>
+			</select>
+
+		</div>
+		
+		<br><br>
+		<label for="file">上传头像:</label>
+		<input type="file" name="userprofile" id="file">
+		<br><br>
+		<label for="info">自我介绍:</label><br>
+		<textarea name="profile" id="info" cols="30" rows="10"></textarea>
+		<br><br>
+		<input type="submit" value="提交">
+		<input type="reset" value="重置">
+
+		<input type="image" name="" src="images/icon.jpg">
+
+
+	</form>
+</body>
+</html>
