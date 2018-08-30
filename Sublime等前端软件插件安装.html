@@ -18,9 +18,40 @@
 	<strong>Git 使用指南</strong>
 	<p>一、git 创建分支并上传</p>
 	<p>1、git branch images ------->images是新分支名字</p>
-	<p>2、git checkout images 切换分支到images</p>
-	<p>3、git push origin images 上传分支及分支内的文件 </p>
+	<p>2、git add images</p>
+	<p>3、git push上传分支及分支内的文件 </p>
 	<p>4、git checkout master 回到主分支</p>
+
+	<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/lhxiaosoft/p/6400812.html">git常用命令及分支简介</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p><strong>1、git基本命令</strong><br>    1）git add   将想要快照的内容写入缓存区<br>    2）git status -s    "AM" 状态的意思是，这个文件在我们将它添加到缓存之后又有改动<br>    3）git commit -m '第一次版本提交'   -m选项添加备注信息<br>    4）git clone url   使用 git clone 拷贝一个 Git 仓库到本地<br>    5）git diff  查看执行 git status 的结果的详细信息<br>        　　尚未缓存的改动：git diff<br>        　　查看已缓存的改动： git diff --cached<br>        　　查看已缓存的与未缓存的所有改动：git diff HEAD<br>        　　显示摘要而非整个 diff：git diff --stat<br>    6）git commit -a    跳过git add 提交缓存的流程   <br>    7）git reset HEAD   用于取消已缓存的内容<br>    8）git rm file     <br>        　　git rm 会将条目从缓存区中移除。这与 git reset HEAD 将条目取消缓存是有区别的。<br>        　　"取消缓存"的意思就是将缓存区恢复为我们做出修改之前的样子。<br>        　　默认情况下，git rm file 会将文件从缓存区和你的硬盘中（工作目录）删除。<br>    9）git mv  重命名磁盘上的文件  如  git mv README  README.md</p>
+<p>10）git push -u origin master      提交代码</p>
+<p><strong>  2、git 分支管理</strong><br>    1）创建分支命令   git branch (branchname)    列出分支  git branch<br>    2）切换分支命令   git checkout (branchname)<br>    3）合并分支       git merge (branchname)<br>    4）创建新分支并立即切换到该分支下 git checkout -b (branchname)<br>    5）删除分支命令  git branch -d (branchname)<br>ps:状态 uu  表示冲突未解决   可以用 git add 要告诉 Git 文件冲突已经解决<br>  <strong>3、查看日志版本</strong><br>    git log 命令列出历史提交记录<br>    git log --oneline   查看历史记录的简洁的版本<br>    git log --oneline --graph   查看历史中什么时候出现了分支、合并<br>  <strong>4、标签</strong><br>    为软件发布创建标签是推荐的。这个概念早已存在，在 SVN 中也有。你可以执行如下命令创建一个叫做 1.0.0 的标签：<br>    git tag 1.0.0 1b2e1d63ff<br>    1b2e1d63ff 是你想要标记的提交 ID 的前 10 位字符。可以使用下列命令获取提交 ID：<br>    git log<br>    你也可以使用少一点的提交 ID 前几位，只要它的指向具有唯一性</p>
+<p><strong>  5、提取远程仓库代码</strong></p>
+<p>1）git fetch　　从远程仓库下载新分支与数据</p>
+<p>2)）git pull　　从远端仓库提取数据并尝试合并到当前分支</p>
+<p><strong>6、git分支</strong></p>
+<p>git-flow主要有5中分支：master、hotfix、release、develop、feature</p>
+<p><img src="https://images2015.cnblogs.com/blog/988885/201702/988885-20170215125232988-1478252652.jpg" alt=""></p>
+<div>
+<div class="zm-editable-content clearfix">feature分支开始于develop分支，完成以后合并到develop分支。<br>当完成一定数量feature分支以后，从develop再开一个release分支出来，这些特性将被更行到下一个发布的版本中，之后的feature将不会被合并到release中。<br>之后在release分支中，只修改bug，然后完成release分支。完成release分支会完成以下三个操作：1、合并release分支到master；2、给master打上版本的标签；3、release回归到develop分支。<br>当发现master上有bug时，开一个hotfix，完成后合并到master分支。<br>基本的开发流程就是这样，不清楚的可以看看文档<a class=" wrap external" href="//link.zhihu.com/?target=https%3A//www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/" rel="nofollow noreferrer" target="_blank">Gitflow Workflow</a></div>
+
+分支简介转载于：https://www.zhihu.com/question/21995370/answer/33172036<br><br></div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
 	
 </body>
 </html>
