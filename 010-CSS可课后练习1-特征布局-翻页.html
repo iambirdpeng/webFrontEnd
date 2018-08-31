@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>翻页</title>
+	<style type="text/css">
+		
+		.cp{
+			width: 958px;
+			height: 40px;
+			margin: 50px auto;
+			border: 1px solid #333;
+			text-align: center;
+			font-size: 0px;
+			
+		}
+		.cp li{
+			display: inline-block;
+			margin: 9px 9px 0 0;
+			background: gold;
+			padding: 5px 10px;
+			font-size: 12px;
+			list-style: none;
+		}
+		.cp li a{
+			text-decoration: none;
+		}
+
+		.clearfix:before{
+			content: "";
+			display: table;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="cp clearfix">
+		<li><a href="">上一页</a></li>
+		<li><a href="">1</a></li>
+		<li><a href="">2</a></li>
+		<li><a href="">3</a></li>
+		<li><a href="">4</a></li>
+		<li><a href="">...</a></li>
+		<li><a href="">17</a></li>
+		<li><a href="">18</a></li>
+		<li><a href="">19</a></li>
+		<li><a href="">20</a></li>
+		<li><a href="">下一页</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>菜单</title>
+
+	<style type="text/css">
+		
+		.menu{
+			
+			width: 694px;
+			height: 50px;
+			padding: 0px;
+			margin: 50px auto;
+			font-size: 0px;
+
+		}
+		.menu li{
+			list-style: none;
+			display: inline-block;
+			border: 1px solid gold;
+			width: 98px;
+			height: 48px;
+			font-size: 16px;
+			font-family: 'kaiti';
+			color: pink;
+			text-align: center;
+			margin-right: -1px;
+		}
+
+		.menu li:hover{
+			background: green;
+			color: red;
+		}
+		.menu li a{
+			display: inline-block;
+			/*text-align: center;*/
+			/*text-align: center;     这里text align 不起作用是因为 文本没有固定宽度。上层的li有固定宽度，所以可以让li的内部文本显示居中* 以后再哪里设置不行可以去父类设置试试*/
+			
+			line-height: 48px;
+			text-decoration: none;
+
+		}
+		.menu li a:hover{
+			color: red;
+		}
+
+	</style>
+
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="">首页</a></li>
+		<li><a href="">公司简介</a></li>
+		<li><a href="">解决方案</a></li>
+		<li><a href="">公司新闻</a></li>
+		<li><a href="">行业动态</a></li>
+		<li><a href="">招贤纳才</a></li>
+		<li><a href="">联系我们</a></li>
+	</ul>
+</body>
+</html>
