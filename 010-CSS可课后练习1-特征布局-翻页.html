@@ -12,15 +12,24 @@
 			border: 1px solid #333;
 			text-align: center;
 			font-size: 0px;
-			
+
 		}
 		.cp li{
 			display: inline-block;
-			margin: 9px 9px 0 0;
+			margin: 7px 9px 0 0;
 			background: gold;
 			padding: 5px 10px;
 			font-size: 12px;
 			list-style: none;
+		}
+
+		.cp span{
+			display: inline-block;
+			margin: 9px 9px 0 0;
+			font-size: 12px;
+			list-style: none;
+			text-decoration: none;
+			
 		}
 		.cp li a{
 			text-decoration: none;
@@ -30,6 +39,39 @@
 			content: "";
 			display: table;
 		}
+		
+		.menu{
+			border: 1px solid #000;
+			width: 958px;
+			height: 40px;
+			margin: 50px auto;
+			list-style: none;
+			padding: 0px;
+			text-align: center;
+			line-height: 40px;
+			font-size: 0px;
+		}
+		.menu li{
+			display: inline-block;
+			text-decoration: none;
+			font-size: 14px;
+			font-family: 'heiti'
+
+		}
+		.menu li a{
+			display: inline-block;
+			text-decoration: none;
+			color: #333;
+		
+		}
+
+		.menu .line{
+			margin: 0px 20px;
+			color: #333;
+		}
+
+
+
 
 	</style>
 </head>
@@ -40,12 +82,28 @@
 		<li><a href="">2</a></li>
 		<li><a href="">3</a></li>
 		<li><a href="">4</a></li>
-		<li><a href="">...</a></li>
+		<span>...</span>
 		<li><a href="">17</a></li>
 		<li><a href="">18</a></li>
 		<li><a href="">19</a></li>
 		<li><a href="">20</a></li>
 		<li><a href="">下一页</a></li>
+	</ul>
+
+	<ul class="menu">
+		<li><a href="">首页</a></li>
+		<li class="line">|</li>
+		<li><a href="">网站建设</a></li>
+		<li class="line">|</li>
+		<li><a href="">程序开发</a></li>
+		<li class="line">|</li>
+		<li><a href="">网络营销</a></li>
+		<li class="line">|</li>
+		<li><a href="">企业VI</a></li>
+		<li class="line">|</li>
+		<li><a href="">案例展示</a></li>
+		<li class="line">|</li>
+		<li><a href="">联系我们</a></li>
 	</ul>
 </body>
 </html>
