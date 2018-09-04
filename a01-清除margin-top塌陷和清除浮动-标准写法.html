@@ -1,0 +1,36 @@
+<!-- margin-top是指嵌套的块，内块元素设置margin-top时会作用在父块上。
+	清除浮动是因为 块内的浮动元素无法自动撑开父块尺寸因此都要清除浮动 -->
+
+	<!-- 清除marin-top塌陷有三种方法1、父块设置一个边框2、设置overflow=hidden 3.用下边的clearfix类。 -->
+	<!-- 清除浮动的方法有三种1、设置overflow=hidden 2、所有浮动元素的最后设置一个空的div 设置style = "clear:both" 3、用下边的clearfix类-->
+	<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除margin-top塌陷和浮动的标准合并写法</title>
+</head>
+<style type="text/css">
+	
+	.clearfix:before,.clearfix:after{
+		content: "";
+		display: table;
+	}
+	.clearfix:after{
+		clear:both;
+	}
+	/* zoom:1是为了解决IE的兼容问题 */
+	
+	.clearfix{
+		zoom:1;
+	}
+
+
+</style>
+<body>
+	<!-- zoom:1是为了解决IE的兼容问题 --> 
+	<div style="font-size:50px;color:red;">详情请看源码</div>
+
+</body>
+</html>
