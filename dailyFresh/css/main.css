@@ -1,0 +1,52 @@
+
+body{
+	font-family: 'Microsoft Yahei';
+	font-size: 12px;
+	color: #666;
+}
+
+.head_con{
+	height:29px;
+	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+}
+
+.welcome{
+	font-size: 12px;
+	height: 29px;
+	line-height: 29px;
+	margin-left: 170px;
+	color: #666;
+}
+
+.user_info{
+	
+	margin-right: 170px;
+}
+
+.login_link,.user_shopping,.user_welcome{
+	height: 29px;
+	line-height: 29px;
+	color: #666;
+
+}
+
+.user_info a{
+	color: #666;
+}
+
+.user_info span{
+	height: 29px;
+	line-height: 29px;
+	color: #666;
+	margin: 0 20px;
+}
+/*.login_link{
+	display: none;
+}*/
+.user_welcome{
+	display: none;
+}
+.user_info em{
+	color: #f80;
+}
