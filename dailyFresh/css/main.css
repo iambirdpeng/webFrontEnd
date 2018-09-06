@@ -50,3 +50,260 @@ body{
 .user_info em{
 	color: #f80;
 }
+.user_info a:hover{
+	color: #f80;
+}
+
+
+
+
+
+.logo_bar{
+	width: 1200px;
+	height: 115px;
+	margin:0 auto;
+}
+
+.logo_bar a{
+	float: left;
+	margin-top: 30px;
+}
+
+.logo_bar .search{
+	width: 616px;
+	height: 38px;
+	border:1px solid #37ab40;
+	margin-top: 34px;
+	margin-left: 122px;
+	background: url(../images/icons.png) 8px 9px no-repeat;
+}
+
+.search .input_text{
+	width: 480px;
+	height: 38px;
+	border:0;
+	outline: none;
+	margin-left: 37px;
+}
+
+/*.search a{
+	margin-top: 0;
+	float: right;
+	width: 98px;
+	height: 38px;
+	background-color: green;
+	font-size: 14px;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+}*/
+
+.search_submit{
+	float: right;
+	width: 98px;
+	height: 38px;
+	background-color: #37ab40;
+	font-size: 14px;
+	text-align: center;
+	line-height: 38px;
+	border: none;
+}
+
+
+
+
+
+
+
+/*购物车*/
+.chart{
+	width: 200px;
+	height: 40px;
+	margin-top: 34px;
+}
+
+.chart a{
+	float:left;
+	margin-top: 0;
+	width: 158px;
+	height: 40px;
+	line-height: 40px;
+	text-indent:58px;
+	font-size: 14px;
+	color: #37ab40;
+	background: url(../images/icons.png) 16px -42px no-repeat #f7f7f7;
+}
+
+.chart_count{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #f80;
+	font-size: 18px;
+	color: #fff;
+
+}
+
+
+
+
+/*mainmenu*/
+.main_menu_con{
+	height: 40px;
+	border-bottom: 2px solid #37ab40;
+}
+
+.main_menu{
+	height: 40px;
+	width: 1200px;
+	margin:0 auto;
+}
+
+.main_menu h1{
+	width: 200px;
+	height: 40px;
+	background-color: #37ab40;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.main_menu a{
+	margin: 0 26px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #666;
+}
+
+.main_menu span{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #666;
+}
+
+
+
+
+/*主菜单*/
+.submenu_con{
+	height: 270px;
+	width: 1200px;
+	
+	margin: 0 auto;
+}
+
+.submenu_left{
+	height: 269px;
+	width: 200px;
+	overflow: hidden;
+}
+
+.submenu_left li{
+	display: block;
+	width: 198px;
+	height: 44px;
+	border: 1px solid #eee;
+	background: url(../images/icons.png) 168px -385px no-repeat;
+}
+
+.submenu_left li a{
+	display: inline-block;
+	height:44px;
+	width: 198px;
+	line-height: 44px;
+	text-align: center;
+	color: #333;
+	font-size: 14px;
+	background: url(../images/icons.png) 8px 9px no-repeat;
+}
+
+
+.submenu_left li .fruit{
+	background-position: 22px -91px;
+}
+
+.submenu_left li .seafood{
+	background-position: 19px -137px;
+}
+
+.submenu_left li .meat{
+	background-position: 19px -188px;
+}
+
+.submenu_left li .egg{
+	background-position: 23px -239px;
+}
+
+.submenu_left li .vegetable{
+	background-position: 23px -289px;
+}
+
+.submenu_left li .frozed{
+	background-position: 23px -339px;
+}
+
+
+
+.slide_con{
+	width: 760px;
+	height: 270px;
+	position: relative;
+}
+
+.left_arrow,.right_arrow{
+	position: absolute;
+	height: 23px;
+	width: 15px;
+	left: 10px;
+	top: 117px;
+	cursor: pointer;
+	background: url(../images/icons.png) -1px -451px no-repeat;
+}
+.right_arrow{
+	left:735px;
+	background-position: 0px -500px;
+}
+
+.spot{
+	position: absolute;
+	width: 100%;
+	height: 11px;
+	left: 0;
+	bottom: 9px;
+	text-align: center;
+	font-size: 0;
+}
+
+.spot li{
+	display: inline-block;
+	height: 11px;
+	width: 11px;
+	background-color:#9f9f9f;
+	margin: 0 5px;
+	border-radius: 50%;
+}
+
+.slide_con .active{
+	background-color: #cecece;
+}
+
+.spot a{
+	display: inline-block;
+	height: 11px;
+	width: 11px;
+}
+
+.adv{
+	width: 240px;
+	height: 270px;
+
+}
+
+/*解决图片下方出现的3像素空白的bug*/
+.adv img{
+	display: block;
+}

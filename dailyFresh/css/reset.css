@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,h6{
 
 /*去掉项目的默认图标*/
 ul{
-	list-style: noen;
+	list-style: none;
 }
 
 em{
