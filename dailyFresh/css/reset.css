@@ -27,7 +27,7 @@ img{
 	border: none;
 }
 
-/*清楚margin塌陷和清除浮动（因为浮动无法撑开父框）*/
+/*清除margin塌陷和清除浮动（因为浮动无法撑开父框）*/
 
 .clearfix:before,.clearfix:after{
 	content: "";

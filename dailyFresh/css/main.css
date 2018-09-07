@@ -307,3 +307,193 @@ body{
 .adv img{
 	display: block;
 }
+
+
+/*通用商品列表块*/
+
+.common_con{
+	width: 1200px;
+	height: 340px;
+	margin: 18px auto 0;
+
+}
+
+.common_con .common_title{
+	width: 1200px;
+	height: 38px;
+	border-bottom: 2px solid #42ad46;
+}
+
+.common_con .common_title h3{
+	line-height: 38px;
+	font-size: 16px;
+	color:#37ab40;
+	text-indent: 10px;
+}
+
+.common_con .common_title ul{
+	height: 38px;
+}
+
+.common_con .common_title li a{
+	line-height: 38px;
+	font-size: 12px;
+	color: #666;
+	margin: 0 10px;
+}
+
+.common_con .common_title a:hover{
+	color:#f80;
+}
+
+.common_con .common_title span{
+	line-height: 38px;
+	margin: 0 10px 0 30px;
+}
+
+.common_con .common_title .more{
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	color: #666;
+
+}
+
+.common_list{
+	width: 1200px;
+	height: 300px;
+}
+
+.common_list .banner{
+	float: left;
+	height: 300px;
+	width: 200px;
+}
+
+.common_list ul li{
+	float: left;
+	width: 249px;
+	height: 299px;
+	border-right: 1px solid #ededed;
+	border-bottom: 1px solid #ededed;
+}
+.common_list ul li a h4{
+	display: block;
+	width: 249px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	font-size: 14px;
+	color:#666;
+}
+
+.common_list ul li a img{
+	display: block;
+	margin: 0 auto;
+}
+
+.common_list ul li a span{
+	display: block;
+	height: 78px;
+	width: 249px;
+	line-height: 78px;
+	text-align: center;
+	color:#c40000;
+	font-size: 20px;
+}
+
+.common_list ul li:hover{
+	width: 248px;
+	height: 298px;
+	border: 1px solid #f80;
+}
+
+/*页脚*/
+
+.footer{
+	height: 150px;
+	border-top: 2px solid #4ab14e;
+	margin-top: 30px;
+}
+
+.footer ul{
+	height: 38px;
+	margin-top: 28px;
+	text-align: center;
+}
+
+.footer ul li{
+	display: inline-block;
+	text-align: center;
+	margin: 0 5px;
+	line-height: 38px;
+}
+
+.footer ul li a{
+	color: #4e4e4e;
+	font-size: 12px;
+}
+
+.footer ul li a:hover{
+	color: #f80;
+}
+
+.footer p{
+	margin-top:5px;
+	height: 58px;
+	line-height: 26px;
+	text-align: center;
+}
+
+
+
+/*登陆页，主要练习表单*/
+
+.login_header{
+	height: 134px;
+	width: 957px;
+	margin: 0 auto;
+}
+
+.login_header a{
+	float: left;
+	margin-top: 27px;
+}
+
+.login_form_con{
+	height: 482px;
+	background-color:#518e17;
+}
+
+.login_form_con .login_form{
+	height: 482px;
+	width: 957px;
+	margin:0 auto;
+}
+.login_form .banner_pic{
+	float: left;
+	margin-top: 88px;
+}
+
+.login_form .slogan{
+	float: left;
+	width: 30px;
+	height: 318px;
+	font:30px/30px 'Microsoft Yahei';
+	color: #fff;
+	text-align: center;
+	margin: 98px 0 0 90px;
+}
+
+.login_form .login_form_group{
+	width: 367px;
+	height: 380px;
+	border: 1px solid #c6c6c5;
+	background-color: #fff;
+	margin-top: 50px;
+}
+
+.login_footer{
+	margin-top: 0;
+	border-top: 0;
+}
