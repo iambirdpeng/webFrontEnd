@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片翻面特效</title>
+	<style type="text/css">
+		.con{
+			width: 300px;
+			height: 272px;
+			margin: 50px auto 0;
+			position: relative;
+			transform-style: preserve-3d;
+		}
+		.pic{
+			width: 300px;
+			height: 272px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			transform: perspective(800px) rotateY(0deg);
+			transform-style: preserve-3d;
+			backface-visibility: hidden;
+			transition: all 1s ease;
+		}
+		.pic_info{
+			width: 300px;
+			height: 272px;
+			background-color: cyan;
+			color: #fff;
+			text-align: center;
+			line-height: 272px;
+			position: absolute;
+			top: 0px;
+			left: 0xp;
+			transform: perspective(800px) rotateY(180deg);
+			transform-style: preserve-3d;
+			backface-visibility: hidden;
+			transition: all 1s ease;
+		}
+
+		.con:hover .pic{
+			transform: perspective(800px) rotateY(180deg);
+		}
+		.con:hover .pic_info{
+			transform: perspective(800px) rotateY(0deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<img class="pic" src="images/location_bg.jpg" alt="风景图">
+		<div class="pic_info">这是图片的背面</div>
+	</div>
+</body>
+</html>
