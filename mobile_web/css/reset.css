@@ -1,6 +1,10 @@
-body,p,h1,h2,h3,h4,h5,h6,ul,dl,dd,input,select,option{
+body,p,h1,h2,h3,h4,h5,h6,ul,dl,dd,input,form,select,option{
 	padding: 0;
 	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
 }
 
 ul{
@@ -9,6 +13,10 @@ ul{
 
 a{
 	text-decoration: none;
+}
+
+img{
+	border: none;
 }
 
 em{
@@ -26,4 +34,12 @@ em{
 
 .clearfix{
 	zoom: 1;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
 }
