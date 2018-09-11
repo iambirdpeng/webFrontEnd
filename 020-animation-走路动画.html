@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation走路动画</title>
+	<style type="text/css">
+		body{
+			height: 1500px;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: cyan;
+			animation: moving 1s ease 1s 5 alternate forwards;
+
+		}
+		.box:hover{
+			animation-play-state: paused;
+		}
+		@keyframes moving{
+			from{
+				width: 300px;
+			}`
+			to{
+				width: 800px;
+			}
+		}
+
+		.box1{
+			width: 120px;
+			height: 182px;
+			margin: 100px auto 0;
+			overflow: hidden;
+			position: relative;
+		}
+		.box1 img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			animation:walking 1s steps(8) 0s infinite;
+		}
+
+		@keyframes walking{
+			from{
+				left: 0px;
+			}
+			to{
+				left: -960px;
+			}
+		}
+
+		.box2{
+			width: 100px;
+			height: 100px;
+			background-color: cyan;
+			border-radius: 50%;
+			margin: 50px 0 0 50px;
+			animation:bounce 2s steps(3) 0s infinite;
+		}
+
+		@keyframes bounce{
+			0%{
+				transform: translateY(0px);
+			}
+
+			50%{
+				transform: translateY(300px);
+				background-color: yellow;
+			}
+
+			100%{
+				transform: translateY(0px);
+				background-color: red;
+			}
+
+
+		}
+
+		.box3{
+			width: 300px;
+			height: 100px;
+			border: 1px solid #000;
+			margin-left: 300px;
+			text-align: center;
+			line-height: 100px;
+		}
+		.box3 div{
+			float: left;
+			width: 25px;
+			height: 25px;
+			margin: 25px 5px;
+			background-color: cyan;
+			border-radius: 50%;
+		}
+
+		.box3 div:nth-child(1){
+			animation:loding 1s ease 0s infinite;
+		}
+		.box3 div:nth-child(2){
+			animation:loding 1s ease 200ms infinite;
+		}
+		.box3 div:nth-child(3){
+			animation:loding 1s ease 400ms infinite;
+		}
+		.box3 div:nth-child(4){
+			animation:loding 1s ease 600ms infinite;
+		}
+		.box3 div:nth-child(5){
+			animation:loding 1s ease 800ms infinite;
+		}
+
+
+		@keyframes loding{
+			from{
+				transform: scale(1);
+			}
+			to{
+				transform: scale(0.5);
+			}
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+
+	<div class="box1"><img src="images/walking.png" alt="走路"></div>
+
+	<div class="box2"></div>
+
+	<div class="box3">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<audio controls autoplay muted loop preload>
+		<source src="source/audio.mp3" type="">
+	</audio>
+
+	<video controls autoplay loop preload muted>
+		<source src="source/mov.mp4" type="">
+		<source src="source/movie.mp4" type="">
+	</video>
+</body>
+</html>
