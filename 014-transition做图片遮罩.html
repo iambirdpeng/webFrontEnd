@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片遮罩</title>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			margin: 100px auto 0;
+			border: 1px solid #000;
+			position: relative;
+			overflow: hidden;
+		}
+		.box img{
+			width: 200px;
+			height: 200px;
+		}
+
+		.box div{
+			width: 200px;
+			height: 100px;
+			background-color: rgba(0,0,0,0.3);
+			position: absolute;
+			top: 200px;
+			color: #fff;
+			text-align: center;
+			transition: top 1s cubic-bezier(0.845, -0.375, 0.215, 1.335)
+		}
+		.box:hover .screen_block{
+			top: 100px;
+		}
+		
+		.box2{
+			width: 400px;
+			height: 200px;
+			border: 1px solid #000;
+			border-radius: 50%;
+			box-shadow: 10px 10px 50px 50px pink inset;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="images/pic2x.jpg" alt="学做黑客图">
+		<div class="screen_block">这是一个遮罩块,遮住的是学做黑客图这是一个遮罩块,遮住的是学做黑客图</div>
+	</div>
+
+	<div class="box2">
+		
+	</div>
+</body>
+</html>
