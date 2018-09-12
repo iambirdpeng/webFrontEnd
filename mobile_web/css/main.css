@@ -8,27 +8,143 @@
 }
 
 .header{
-	height: 50px;
-	background-color: green;
+	height: 2.5rem;
+	background-color: #37ab40;
+	position: relative;
 }
+
+.header img{
+	display: block;
+	width: 4.45rem;
+	margin: 0.3rem auto 0;
+}
+
+.header .search{
+	position: absolute;
+	top: 0.55rem;
+	right: 0.7rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url(../images/icons.png) 0 0 no-repeat;
+	background-size: 3rem 42rem;
+}
+
+
 
 .center_wrap{
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 50px;
-	bottom: 50px;
-	background-color: cyan;
+	top: 2.5rem;
+	bottom: 2.5rem;
+	background-color:#efefef;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
 
+.slide{
+	height: 7.0rem;
+}
+.slide img{
+	width: 100%;
+}
+
+.menu{
+	height: 9.25rem;
+	margin-top: 0.7rem;
+	background-color: #fff;
+}
+
+.menu ul{
+	width: 16.3rem;
+	height: 8.0rem;
+	margin: 0.65rem 0 0 1.3rem;
+}
+
+.menu li{
+	float: left;
+	height: 3.9rem;
+	width: 25%;
+}
+
+.menu li a{
+	display: block;
+	width: 3.0rem;
+	height: 2.9rem;
+	background: url(../images/icons.png) 0 -3.0rem no-repeat;
+	background-size: 3rem 42rem;
+}
+
+.menu li:nth-child(2) a{
+	background-position: 0 -6rem;
+}
+.menu li:nth-child(3) a{
+	background-position: 0 -9rem;
+}
+.menu li:nth-child(4) a{
+	background-position: 0 -12rem;
+}
+.menu li:nth-child(5) a{
+	background-position: 0 -15rem;
+}
+.menu li:nth-child(6) a{
+	background-position: 0 -18rem;
+}
+.menu li:nth-child(7) a{
+	background-position: 0 -21rem;
+}
+.menu li:nth-child(8) a{
+	background-position: 0 -24rem;
+}
+
+
+.menu li h2{
+	width: 3.0rem;
+	height: 1rem;
+	font-size:12px;
+	line-height: 1rem;
+	font-family: 'Microsoft Yahei';
+	text-align: center;
+	color: #666;
+}
+
+
+.goods_list_con{
+	height: 17.3rem;
+	background-color: #fff;
+	margin-top: 0.5rem;
+}
+.goods_list_con .title{
+	height: 2.25rem;
+}
+
+.goods_list_con .title h3{
+	float: left;
+	width: 3.8rem;
+	height: 1.0rem;
+	font:14px/1rem 'Microsoft Yahei';
+	border-left: 0.5rem solid #fbc83d;
+	text-indent: 0.5rem;
+	color: #fbc83d;
+}
+
+.goods_list_con .title a{
+	float: right;
+	width: 3.8rem;
+	height: 1.0rem;
+	font:14px/1rem 'Microsoft Yahei';
+	color: #666;
+}
+
 .footer{
 	position: absolute;
-	height: 50px;
+	height: 2.5rem;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	background-color: red;
+/*	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;*/
 }
 
