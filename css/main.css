@@ -5,3 +5,8 @@
 			line-height: 50px;
 			font-family: 'KaiTi';
 		}
+
+
+		@media(max-width: 900px) {
+			
+		}
