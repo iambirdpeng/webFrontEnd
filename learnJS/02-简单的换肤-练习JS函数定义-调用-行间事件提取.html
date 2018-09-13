@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数定义=调用-行间事件提取</title>
+	<style type="text/css">
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: cyan;
+		}
+	</style>
+
+	<script type="text/javascript">
+		//id一定要用引号包起来，否则会认为是一个变量，引起来之后是一个字符串
+		function skin1(){
+			var oDiv1 = document.getElementById('div1');
+			oDiv1.style.background = 'red';
+		}
+		function skin2(){
+			var oDiv1 = document.getElementById('div1');
+			oDiv1.style.background = 'black';
+		}
+		//提取行间事件时要注意用window.onload = function(){}
+		window.onload = function(){
+			var oBtn1 = document.getElementById('div1');
+			oBtn1.onclick = skin1;
+			var oBtn2 = document.getElementById('div2');
+			oBtn2.onclick = skin2;
+		}
+	</script>
+</head>
+<body>
+	<div class="box1" id="div1"></div>
+	<div class="box2" id="div2"></div>
+	<input type="button" value="红色盒子" id="btn1">
+	<input type="button" name="" value="黑色盒子" id="btn2">
+</body>
+</html>

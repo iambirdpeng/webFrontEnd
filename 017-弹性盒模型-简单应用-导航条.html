@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹性盒模型-导航条</title>
+	<style type="text/css">
+		body,ul{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.header_con{
+			width: 960px;
+			height: 80px;
+			background: gold;
+			display: flex;
+			margin: 50px auto 0;
+		}
+		.logo{
+			width: 80px;
+			height: 80px;
+			background: green;
+		}
+		.header_con ul{
+			flex-grow: 1;
+			background-color: cyan;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			overflow:hidden;
+		}
+		.header_con ul li{
+			flex-grow: 1;
+			text-align: center;
+			border-right: 1px solid #fff;
+			/*这里有个技巧，magin负数会从里往外撑 ， magin正数会从外往里撑*/
+			margin-right:-1px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="header_con">
+		<div class="logo"></div>
+		<ul>
+			<li>首页</li>
+			<li>公司简介</li>
+			<li>案例</li>
+			<li>公司新闻</li>
+			<li>联系我们</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -215,7 +215,9 @@
 	right: 0;
 	bottom: 0;
 	background-color: #fff;
-/*	overflow: hidden;
+/*	
+	这三行的作用是让文字超出盒子部分不换行不裁切，而是以...的形式显示
+	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;*/
 }
