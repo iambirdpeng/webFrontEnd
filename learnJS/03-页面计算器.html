@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面计算器</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oInput1 = document.getElementById('input1');
+			var oInput2 = document.getElementById('input2');
+			var oSelect = document.getElementById('select')
+			var oCal = document.getElementById('cal')
+			oCal.onclick = function(){
+				var num1 = oInput1.value;
+				var num2 = oInput2.value;
+				if(num1 == "" || num2 == "")
+				{
+					alert("表单不能为空");
+					return;
+				}
+				if(isNaN(num1)||isNaN(num2)){
+					alert('表单中必须是数字');
+					return;
+				}
+				num1 = parseInt(num1);
+				num2 = parseInt(num2);
+				var fuhao = oSelect.value;
+				switch(fuhao)
+				{
+					case '+':
+						alert(num1+num2);
+						break;
+					case '/':
+						alert(num1/num2);
+						break;
+					case '-':
+						alert(num1-num2);
+						break;
+					case '*':
+						alert(num1*num2);
+						break;
+				}
+
+
+
+			}
+
+
+
+
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="input1" >
+	<select name="" id="select">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+	<input type="text" id="input2">
+	<input type="submit" value="计算" id="cal">
+</body>
+</html>
