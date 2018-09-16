@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面倒计时</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oClock = document.getElementById('clock');
+
+			function lefttime(){
+
+
+
+				var now = new Date();
+				var future = new Date(2018,8,20,23,59,59);
+				var lefts = future - now;
+				lefts = parseInt(lefts/1000);
+				day = parseInt(lefts/86400);
+				hour = parseInt((lefts%86400)/3600);
+				minute = parseInt((lefts%3600)/60);
+				second = lefts%60;
+
+
+
+
+				oClock.innerHTML= '距离2018年9月20日24时还有'+todou(day)+'天'+todou(hour)+'时'+todou(minute)+'分'+todou(second)+'秒';
+			}
+			lefttime();
+			setInterval(lefttime,1000);
+			// alert(day+'-'+hour+'-'+minute+'-'+second);
+		}
+
+
+
+		function todou(num){
+			if(num<10){
+				return '0'+num;
+			}
+			else{
+				return num;
+			}
+
+			
+		}
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<div class="clock" id="clock"></div>
+</body>
+</html>

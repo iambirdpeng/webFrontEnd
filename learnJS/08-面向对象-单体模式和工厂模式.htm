@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单体模式-工厂模式</title>
+	<script type="text/javascript">
+		
+		//单体模式
+		var Tom = {
+			name:'Tom',
+			age:18,
+			showname:function(){
+				alert(this.name);
+			},
+			showage:function(){
+				alert(this.age);
+			},
+		}
+		// Tom.showname();
+		// Tom.showage();
+
+		//工厂模式
+
+		function Person(name,age,job){
+			var o = new Object;
+			o.name = name;
+			o.age = age;
+			o.job = job;
+			o.showname = function(){
+				alert(this.name);
+			};
+			o.showage = function(){
+				alert(this.age);
+			};
+			o.showjob = function(){
+				alert(this.job);
+			};
+
+			return o;
+
+		}
+
+		Alex = Person('Alex',19,'engineer');
+		jack = Person('jack',20,'worker');
+		Alex.showname();
+		Alex.showjob();
+		jack.showage();
+		jack.showjob();
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

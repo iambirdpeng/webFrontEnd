@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封闭函数</title>
+	<script type="text/javascript">
+		//封闭函数是基于匿名函数写的，三种方法，第一种把匿名函数整个用小括号括起来，后边再加小括号，第二种是在匿名还是前边加~或者！，后边加小括号。
+		(function(){
+			var str = '欢迎访问';
+			alert(str);
+		})();
+		!function(){
+			var str1 = '欢迎访问1';
+			alert(str1);
+		}();
+		~function(){
+			var str2 = '欢迎访问2';
+			alert(str2);
+		}();
+
+	</script>
+</head>
+<body>
+	<div>封闭函数作用是在已经写好的网页上加功能时用封闭函数，避免对原程序的污染。
+	用封闭函数不用函数名，封闭函数内部的变量属于局部变量不会对以前的功能产生影响</div>
+	
+</body>
+</html>
