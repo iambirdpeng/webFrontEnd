@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造函数-原型模式</title>
+	<style type="text/css">
+		.box{
+			width: 300px;
+			height: 300px;
+			border: 1px solid #000;
+			background
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		};
+
+		Person.prototype.showname = function(){
+			alert(this.name);
+		};
+
+		// var jack = new Person('jack',19);
+		// jack.showname();
+		// alert(jack.name);
+		function Sperson(name,age,job){
+			//继承属性用call
+			Person.call(this,name,age);
+			this.job=job;
+		};
+		//继承类用   子类.prototype = 父类();
+		Sperson.prototype=new Person();
+
+		jack = new Sperson('jack',22,'worker');
+
+		//jack.showname();
+
+		//以下是新选择器querySelector的实验
+		//用id选就是 #ID
+		window.onload = function(){
+		var oBox = document.querySelector('#box');
+		oBox.style.background = 'gold';
+		var oLi = document.querySelectorAll('.list li');
+		oLi[6].innerHTML = 'black';
+		}
+		
+		
+
+	</script>
+</head>
+<body>
+	<div id="box" class="box">
+		<ul class="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+	</div>
+</body>
+</html>
