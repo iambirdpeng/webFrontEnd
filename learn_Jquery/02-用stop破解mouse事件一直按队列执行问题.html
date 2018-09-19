@@ -17,7 +17,7 @@
 	<script type="text/javascript">
 		
 		$(function(){
-
+			//mouseover mouseout 和 mouseenter mouseleave 的区别，前两个对子元素也有效（鼠标从改元素移到该元素的子元素也触发）|而后两个只对该元素自己有用，对子元素无效，我敢接还是mouseenter mouseleave好用。
 			$('#box').mouseover(function(event) {
 				$('#box').stop().animate({left:300,top:300});
 			});

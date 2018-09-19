@@ -47,51 +47,57 @@
 			
 			var $ul = $('#slide ul');
 			var left = 0;
-			var deraction = 2;
-
-			$ul.html($ul.html()+$ul.html());
-
+			var direction = 2;
 			var timer = setInterval(move,30);
-
-
-			function move(){
-
-				left-=deraction;
-
-				if(left<-500){
-					
-					left = 0;
-				}
-
-				if(left>0){
-
-					left=-500;
-				}
-				$ul.css({left:left});
-			}
-
+			$ul.html($ul.html() + $ul.html());
+			
+			function move()
+				{
+					left -= direction;
+					$('#slide ul').css({left:left});
+					if(left<-500)
+						{
+							left = 0;
+						};
+					if(left>0)
+					{
+						left = -500;	
+					}
+				};
 
 			$('#btn1').click(function(){
-				deraction = 2;
+				direction = 2;
+			});
+			$('#btn2').click(function(){
+				direction = -2;
 			});
 
-			$('#btn2').click(function(){
-				deraction = -2;
-			})
+			$('#slide').mouseenter(function() {
+				clearInterval(timer);
+			});
+
+			$('#slide').mouseleave(function(event) {
+				timer = setInterval(move,30);
+			});
 
 
-			$('#slide').mouseover(function(){
-				clearInterval(timer);				
-			})
 
-			$('#slide').mouseout(function(){
-				timer = setInterval(move,30);			
-			})
+
+
+
+
+
+
+
+
+
+
 
 		})
+	
 
 
-
+	</script>
 	</script>
 
 

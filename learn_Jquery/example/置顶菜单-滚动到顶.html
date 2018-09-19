@@ -4,59 +4,7 @@
 	<meta charset="UTF-8">
 	<title>置顶菜单</title>
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
 
-			$(window).scroll(function() {
-				
-				var nowTop = $(document).scrollTop();
-
-				if(nowTop>200){
-					$('.menu').css({
-						position:'fixed',
-						left:'50%',
-						top:0,
-						marginLeft:-480
-					});
-
-					$('.menu_pos').show();
-				}
-				else{
-					$('.menu').css({
-						position:'static',						
-						marginLeft:'auto'
-					});
-					$('.menu_pos').hide();
-				}
-
-
-			  if(nowTop>400){
-			  	 $('.totop').fadeIn();
-			  }
-			  else{
-			  	$('.totop').fadeOut();
-			  }
-
-
-
-			});
-
-
-			$('.totop').click(function() {
-				
-				$('html,body').animate({'scrollTop':0});
-
-			});
-
-
-
-
-		})
-
-
-
-
-	</script>
 	<style type="text/css">
 		body{margin:0px;}
 		.logo_bar{
@@ -99,6 +47,35 @@
 			display:none;
 		}
 	</style>
+
+	<script type="text/javascript">
+		//总结1、老毛病，JSON格式只要不是变量或者数值就用用引号，animate不用管属性是用attr,prop还是css
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				console.log($(document).scrollTop());
+				if($(document).scrollTop()>=200){
+					$('.menu').css({position:'fixed',left:'50%',top:0,marginLeft:-480});
+					$('.totop').css({display:'block'});
+				}
+				else{
+					$('.menu').css({position:'static',marginLeft:'auto'});
+					$('.totop').css({display:'none'});
+				};
+
+			});
+
+			$('.totop').click(function(){
+				//$(document).scrollTop(0);
+				//$('body,html').prop({'scrollTop':0});
+				$('.body,html').animate({'scrollTop':0});
+			})
+
+
+
+
+		});
+		
+	</script>
 
 </head>
 <body>
