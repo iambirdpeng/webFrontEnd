@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01-Jquery做选项卡-注意$(this).index()</title>
+	<style type="text/css">
+				.btns{
+			width: 500px;
+			height: 50px;
+		
+		/*	display: flex;
+			justify-content: space-around;
+			align-items: center;*/
+			text-align: center;
+
+		}
+		.btns input{
+			display: inline-block;
+			width: 100px;
+			height: 50px;
+			margin:0 30px;
+			border: none;
+		}
+
+		.btns .current{
+			background-color: gold;
+		}
+
+		.content{
+			width: 500px;
+			height: 200px;
+			position: relative;
+		}
+		.content div{
+			width: 500px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			display: none;
+		}
+
+		.content .active{
+			display: block;
+			background-color: gold;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		//ready的完整写法是 $(document).ready(function(){xxxxxxxxxxxxxxxx})
+
+		//修饰过滤如$(#list li:gt(2))是直接用：gt(2)修饰并选出，函数过滤如$(#list li).eq(2)是把集选出来后用eq()函数再次过滤。
+
+		$(function(){
+				//click时间的函数要卸载click后边的小括号里。
+			$('.btns input').click(function(){
+				$(this).addClass('current').siblings().removeClass('current');
+				//$(this).index()是点击的input在该input所在的同级里的序列，从0开始计。.eq过滤选择
+				$('#content div').eq($(this).index()).addClass('active').siblings().removeClass('active');
+
+			});
+
+			
+
+		});
+
+	</script>
+
+</head>
+<body>
+
+	<div class="btns" id="btns">
+		<input type="button" value="按钮一" class="current">
+		<input type="button" value="按钮二">
+		<input type="button" value="按钮三">
+	</div>
+	<div class="content" id="content">
+		<div class="active">按钮一的显示内容</div>
+		<div>按钮二的显示内容</div>
+		<div>按钮三的显示内容</div>
+	</div>
+			
+</body>
+</html>
