@@ -16,18 +16,63 @@
 	<script type="text/javascript" src='js/jquery-1.12.4.min.js'></script>
 	<script type="text/javascript">
 		
-		$(function(){
+			$(function(){
 
-			$('#box').mouseover(function(event) {
-				$('#box').stop().animate({left:300,top:300});
+			var $h = $(window).height();
+			var $pages = $('.pages');
+			$pages.css({height:$h});
+			var $points = $('.points li');
+			var nowscreen = 0;
+			var timer = null;
+
+			$pages.eq(0).addClass('moving');
+
+
+
+			$(window).mousewheel(function(ev,dat){
+
+				clearTimeout(timer);
+
+				timer = setTimeout(function(){
+
+				if(dat==-1)
+				{
+					nowscreen++;
+				}
+				else
+				{
+					nowscreen--;
+				}
+
+				if(nowscreen<0)
+				{
+					nowscreen=0;
+				}
+
+				if(nowscreen>4)
+				{
+					nowscreen=4
+				}
+
+				$('.pages_con').animate({top:-nowscreen*$h},300);
+
+				$pages.eq(nowscreen).addClass('moving').siblings().removeClass('moving');
+				$points.eq(nowscreen).addClass('active').siblings().removeClass('active');
+
+				},200)				
+
+			})
+
+			$points.click(function(event) {
+
+				var nowindex = $(this).index();
+
+				$('.pages_con').animate({top:-nowindex*$h},300);
+
+				$pages.eq(nowindex).addClass('moving').siblings().removeClass('moving');
+				$points.eq(nowindex).addClass('active').siblings().removeClass('active');
+
 			});
-
-			$('#box').mouseout(function(event) {
-				$('#box').stop().animate({left:200,top:200});
-			});
-
-
-
 
 		})
 		

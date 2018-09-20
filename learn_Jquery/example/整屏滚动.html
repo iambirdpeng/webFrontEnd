@@ -9,66 +9,57 @@
 	<script type="text/javascript">
 		/*css的transition（all,1000,ease,300）是触发式的，对该元素的样式有所改动就会触发，JS中可以
 		  给该元素增加一个权重高一点的样式，引发样式更改就会触发动画。不能去掉原来的CLASS，直接去掉原来的样式
-		  会把transition动画也去掉了*/
-		$(function(){
-
+		  会把transition动画也去掉了
+		  */
+		$(document).ready(function() {
 			var $h = $(window).height();
 			var $pages = $('.pages');
 			$pages.css({height:$h});
-			var $points = $('.points li');
-			var nowscreen = 0;
 			var timer = null;
+			var current_page = 0;
+			var total_page = $pages.length;
+			alert(total_page);
+			$pages.eq(current_page).addClass('moving').siblings().removeClass('moving');
 
-			$pages.eq(0).addClass('moving');
-
-
-
-			$(window).mousewheel(function(ev,dat){
+			$(window).mousewheel(function(event,data){
 
 				clearTimeout(timer);
+				timer=setTimeout(function(){
 
-				timer = setTimeout(function(){
+					if(data == -1){
+						if(current_page<(total_page-1))
+						current_page++;			
+					};
+					if(data == 1){
+						if(current_page>0){
+							current_page--;
+						};
+					};
 
-				if(dat==-1)
-				{
-					nowscreen++;
-				}
-				else
-				{
-					nowscreen--;
-				}
+					$('.pages_con').animate({top:(-current_page*$h)},300);
+					//下边这行注释的虽然对，但不可取，应该用jquery的选择器eq
+					$pages.eq(current_page).addClass('moving').siblings().removeClass('moving');
+					$('.points li').eq(current_page).addClass('active').siblings().removeClass('active');
 
-				if(nowscreen<0)
-				{
-					nowscreen=0;
-				}
+				},200);
+			});
 
-				if(nowscreen>4)
-				{
-					nowscreen=4
-				}
-
-				$('.pages_con').animate({top:-nowscreen*$h},300);
-
-				$pages.eq(nowscreen).addClass('moving').siblings().removeClass('moving');
-				$points.eq(nowscreen).addClass('active').siblings().removeClass('active');
-
-				},200)				
-
-			})
-
-			$points.click(function(event) {
-
-				var nowindex = $(this).index();
-
-				$('.pages_con').animate({top:-nowindex*$h},300);
-
-				$pages.eq(nowindex).addClass('moving').siblings().removeClass('moving');
-				$points.eq(nowindex).addClass('active').siblings().removeClass('active');
+			$('.points li').click(function(event) {
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.pages_con').animate({top:-($(this).index()*$h)}, 300);
+				$pages.eq($(this).index()).addClass('moving').siblings().removeClass('moving');
 
 			});
 
-		})
+
+
+
+
+
+
+
+
+		});
 
 	</script>	
 </head>
