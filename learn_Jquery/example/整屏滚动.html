@@ -7,6 +7,9 @@
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 	<script type="text/javascript">
+		/*css的transition（all,1000,ease,300）是触发式的，对该元素的样式有所改动就会触发，JS中可以
+		  给该元素增加一个权重高一点的样式，引发样式更改就会触发动画。不能去掉原来的CLASS，直接去掉原来的样式
+		  会把transition动画也去掉了*/
 		$(function(){
 
 			var $h = $(window).height();

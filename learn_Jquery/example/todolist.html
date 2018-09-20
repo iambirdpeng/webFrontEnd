@@ -50,73 +50,69 @@
 	</style>
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript">
-		$(function(){
-
-			$('#btn1').click(function(){
-
-				var txt = $('#txt1').val();
-				$('#txt1').val('');
-
-				if(txt==''){
-					alert('请输入内容！');
-					return;
+		$(document).ready(function() {
+			var $input_txt = $('#txt1');
+			var $input_btn = $('#btn1');
+			$input_btn.bind('click',function() {
+				var txt = $input_txt.val();
+				//prop('value');
+				if(txt!=''){
+					var add_elem = $('<li><span>'+txt+'</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;" class="del">删除</a></li>');
+					$('ul').prepend(add_elem);
 				}
-
-
-				$li = $('<li><span>'+ txt +'</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;" class="del">删除</a></li>');
-
-				$li.appendTo('#list');
-
 			});
 
 
+			$('ul').delegate('a', 'click', function() {
+				var handle = $(this).attr('class');
+				
+				switch(handle){
+					case 'del':
+						$(this).parent().remove();
+						break;
+					case 'down':
+						if($(this).parent().next().length == 0)
+						{
+							alert('到底咧');
+							return;
+						}
+						$(this).parent().insertAfter($(this).parent().next());
+						break;
+					case 'up':
+						if ($(this).parent().prev().length == 0) 
+						{
+							alert('到顶了！');
+							return;
+						}
+						$(this).parent().insertBefore($(this).parent().prev());
 
-			/*
-
-			$('.del').click(function() {
-				$(this).parent().remove();
-			});
-
-			*/
 
 
-			$('#list').delegate('a', 'click', function() {
-
-				var handler = $(this).attr('class');
-
-				if(handler=='del'){
-					$(this).parent().remove();
-				}
-
-				if(handler=='up'){
-
-					if($(this).parent().prev().length==0)
-					{
-						alert('到顶了！');
-						return;
-					}
-
-					$(this).parent().insertBefore($(this).parent().prev());				
-				}
-
-				if(handler=='down'){
-
-					if($(this).parent().next().length==0)
-					{
-						alert('到底了！');
-						return;
-					}
-
-					$(this).parent().insertAfter($(this).parent().next());				
 				}
 
 
 			});
 
+			// $('ul').delegate('.down', 'click', function() {
+			// 	var this_txt = $(this).parent().html();
+			// 	$(this).parent().next().after($(this).parent());
+				// var $next_all = $(this).parent().nextAll();
+				// alert($next_all.length);
+				// var aNext= [];
+				//注意下边这段代码什么时候是原生的对象，什么时候是jQuery对象。原生对象要用原生的内置函数。
+				// for(var i=0;i<$next_all.length;i++){
+				// 	aNext[i] = $($next_all[i]).html();
+				// 	alert(aNext[i]);
+				// }
+			// });
+		
 
 
-		})
 
+
+
+
+		});
 	</script>	
 </head>
 <body>
