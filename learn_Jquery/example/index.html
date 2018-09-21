@@ -6,28 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/slide.js"></script>
-	<script type="text/javascript">
-		$.ajax({
-			url: 'js/data.json',
-			type: 'get',
-			dataType: 'json'
-		})
-		.done(function(data) {
-			if(data.code==1){
 
-				$('.login_info em').html(data.data.name);
-				$('.login_info').show();
-				$('.login_btn').hide();
-			}
-		})
-		.fail(function() {
-			alert('链接超时，请重试！');
-		})
+	<script type="text/javascript" src="js/slide1.js"></script>
 
-
-	</script>
 </head>
 <body>
 	<div class="header_con">
