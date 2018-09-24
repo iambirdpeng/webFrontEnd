@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test jsonp</title>
+	
+	<script type="text/javascript">
+		function ab(dat){
+			alert(dat.name);
+	}
+	</script>
+	<!-- test.js 里的ab({'name':'jack'})其实就是个函数调用调用ab函数（）里的{'name':'jack'}是ab函数的实参
+	因此对于test.js的引用一定要放在ab函数声明之后
+	这是prototype JS的用法,jQuery里更方便直接用$.ajax就用，类型写成jsonp就可以
+	 -->
+<script type="text/javascript" src="test.js"></script>
+	
+
+</head>
+<body>
+	
+</body>
+</html>

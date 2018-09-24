@@ -8,6 +8,27 @@
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 
 	<script type="text/javascript" src="js/slide1.js"></script>
+	<script type="text/javascript">
+
+		$.ajax({
+			url: 'js/data.json',
+			type: 'get',
+			dataType: 'json',
+		})
+		.done(function(data) {
+			console.log("success");
+			if(data.code == 1){
+				$('.login_info em').html(data.data.name+'-'+data.data.age);
+				$('.login_btn').css({display:'none'});
+				$('.login_info').css({display:'block'});
+				
+			}
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		
+	</script>
 
 </head>
 <body>

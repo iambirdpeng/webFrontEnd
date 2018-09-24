@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cookie-localStorage-sessionStorage</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		
+		$.cookie('mycookies','oks',{expires:7,path:'/'});
+		alert($.cookie('mycookies'));
+		alert($.cookie('monitor_count'));
+		localStorage.setItem('mystorage','ok');
+		alert(localStorage.mystorage);
+		//sessionStorage和localStorage一样用。不用jQuery.sessionStorage关掉页面就清除。localStorage永久存储，他们两个都不会跟随请求发送。cookie会随请求发送，最大4K可设置{}里设置过期时间和存储路径。
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

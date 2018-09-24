@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery-jsonp</title>
+	<script type="text/javascript" src='js/jquery-1.12.4.min.js'></script>
+	<script type="text/javascript">
+	//ajax的jsonp调用，注意别漏了设置jsonpCallback为test.js里调用的函数名。
+		$.ajax({
+			url: 'test.js',
+			type: 'get',
+			dataType: 'jsonp',
+			jsonpCallback:'ab'
+		})
+		.done(function(dat) {
+			alert(dat.name);
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

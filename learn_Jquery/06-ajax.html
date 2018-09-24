@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<script type="text/javascript" src='js/jquery-1.12.4.min.js'></script>
+	<script type="text/javascript">
+		//注意data.json文件的构成，一般构成方式为2层大括号。注意看去吧
+		$.ajax({
+			url: 'example/js/data.json',
+			type: 'get',
+			dataType: 'json',
+		})
+		.done(function(dat) {
+			alert(dat.data.name);
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
