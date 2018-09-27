@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>swiper</title>
+	<link rel="stylesheet" type="text/css" href="css/swiper.css">
+	<style type="text/css">
+	.swiper-container{
+		width: 622px;
+		
+	}
+	
+
+
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src='js/swiper.min.js'></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			
+			var mySwiper = new Swiper('.swiper-container',{
+				loop: true,
+				pagination: {
+				    el: '.swiper-pagination',
+				  },
+				})
+		});
+		  
+	</script>
+
+
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="example/images/001.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="example/images/002.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="example/images/003.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+   
+</div>	
+
+	
+
+</body>
+</html>
